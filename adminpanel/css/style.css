@@ -1,0 +1,49 @@
+/* Navbar */
+.nav-link[data-toggle].collapsed:after {
+  content: "▾";
+}
+
+.nav-link[data-toggle]:not(.collapsed):after {
+  content: "▴";
+}
+
+#sidebar ul {
+  width: 100%;
+}
+
+#sidebar > ul > li:first-child {
+  height: 60px;
+  background-color: #777777;
+  width: 100%;
+  color: #ffffff;
+  padding: 16px;
+}
+
+/* Login Page */
+#login {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("../images/login-bg.jpg");
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: overlay;
+}
+
+.login-container {
+  width: 420px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Dashboard Page */
+#dashboard-container {
+  width: 80%;
+  display: flex;
+  height: 80vh;
+  justify-content: space-around;
+  align-items: center;
+}

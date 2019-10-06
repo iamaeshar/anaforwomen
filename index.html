@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <?php include('include/head.inc.html'); ?>
+    <title>Menstrual  Hygiene Awareness by Golden Wings| Ana for women</title>
+    <meta name="keywords"
+        content="Women Hygiene Awareness, Women Empowerment projects, Menstruation Awareness, menstrual hygiene awareness, pads awareness, sanitary pads, pads for periods">
+    <meta name="description"
+        content="Ana for Women is a great initiative that promotes the objective of changing the attitudes of people about menstruation and sanitary napkins.">
+
+    <style>
+        @media(max-width:768px) {
+            #our-stori-image {
+                position: static !important;
+            }
+
+            #our-stori-image img {
+                position: static !important;
+            }
+
+            .md-mb-4 {
+                margin-bottom: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <?php include('layouts/header.html'); ?>
+    <?php include('layouts/navbar.html'); ?>
+
+    <section id="home-carousel">
+        <div id="bannerCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="images/banners/home-banner-1.jpg"
+                        alt="Anaforwomen - First slide Banner">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="images/banners/home-banner-2.jpg"
+                        alt="Anaforwomen - First slide Banner">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="images/banners/home-banner-3.jpg"
+                        alt="Anaforwomen - First slide Banner">
+                </div>
+            </div>
+            <!-- <a class="carousel-control-prev" href="#bannerCarousel" role="button" data-slide="prev">
+                <img src="images/icons/chevron-left.svg" alt="left Icon">
+            </a>
+            <a class="carousel-control-next" href="#bannerCarousel" role="button" data-slide="next">
+                <img src="images/icons/chevron-right.svg" alt="Right Icon">
+            </a> -->
+        </div>
+    </section>
+
+    <section id="our-story" class="py-5">
+        <div class="container">
+            <h2 class="text-center font-weight-bold">OUR Story</h2>
+            <br>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="h-100 w-100 position-relative" id="our-stori-image">
+                        <img src="images/gallery/gallery (2).jpg" alt="Images"
+                            class="gallery-item img-fluid shadow-sm position-absolute bottom-0 left-0"
+                            style="max-height: 200px;">
+                        <img src="images/gallery/gallery (5).jpg" alt="Images"
+                            class="gallery-item img-fluid shadow-sm position-absolute top-0 left-0"
+                            style="max-height: 200px;">
+                        <img src="images/gallery/gallery (1).jpg" alt="Images"
+                            class="img-fluid shadow-sm position-absolute bottom-0 left-0" style="max-height: 200px;">
+                        <img src="images/gallery/gallery (3).jpg" alt="Images"
+                            class="img-fluid shadow-sm position-absolute bottom-0 right-0" style="max-height: 200px;">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 order-first order-md-0 shadow">
+                    <div class="short-about p-3 text-justify">
+                        <p>Ana for Women is a great initiative that promotes the objective of changing the attitudes of
+                            people about menstruation and sanitary napkins. It focuses on imparting knowledge about
+                            menstrual hygiene and management among young girls in the remote areas of India. The project
+                            is headed by Ana and the project plans to take forward the personal hygiene for women, by
+                            conducting workshops and providing franchises. </p>
+                        <p>Adolescence in girls is a very special period as it is a transition from girlhood to
+                            womanhood; however menstruation is an important sign of adolescence... <a class="btn-link"
+                                href="our-story">Read more</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-we-need" class="py-5 text-white shadow">
+        <div class="container">
+            <h2 class="text-center font-weight-bold">WHY do we need awareness ? </h2>
+            <br>
+            <p>In the remote areas of our country, talking about menstruation and women’s health is still considered as
+                a taboo. Therefore, it is important that basic education about menstruation hygiene is imparted by
+                mothers to their adolescent daughters. But due to the societal pressure, women do not talk about the
+                issue.
+            </p>
+            <p>
+                The stigma around menstruation has caused several issues as it hurts the human rights of individuals. We
+                need awareness as there are poor protections leading to severe infections. However, this issue arises
+                due to the several practices that women go through as they cannot afford sanitary napkins and use a
+                cloth that is extremely unhygienic. </p>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-5">
+        <div class="container">
+            <h2 class="text-center font-weight-bold">TAKE a look at our work ! </h2>
+            <br>
+            <div class="row">
+                <?php
+                for ($i = 1; $i <= 8; $i++) {
+                    ?>
+                <div class="col-md-3">
+                    <a href="images/gallery/gallery (<?= $i?>).jpg" data-gallery="example-gallery"
+                        data-toggle="lightbox">
+                        <img src="images/gallery/gallery (<?= $i?>).jpg" class="img-fluid shadow-sm mb-3 gallery-item"
+                            alt="Gallery Image <?=$i ?>">
+                    </a>
+                </div>
+                <?php
+                }
+                ?>
+            </div>
+        </div>
+    </section>
+
+    <section id="home-franchise" class="shadow-sm py-4">
+        <div class="container">
+            <h2 class="text-center font-weight-bold">WANT to be a part of Golden Wings !</h2>
+            <br>
+            <p>Golden Wings provides durable and cheap pads for the women who can't afford the expensive ones and still
+                using the cloth. We all knew that there are many diseases which arise by using the cloth. So by using
+                this pad they can change themselves from cloth to pad. It also help women’s who need to work but don't
+                had any kind of degrees.</p>
+            <p><a href="franchise">Click here</a> to be our franchise.</p>
+        </div>
+    </section>
+    <!-- <section id="testimonials" class="py-5 text-white shadow">
+        <div class="container">
+            <h2 class="text-center font-weight-bold">WE are Being Praised ! </h2>
+            <br>
+            <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="bg-light text-dark p-5">
+                            <div class="border border-dark border-dashed p-5">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque commodi ducimus animi
+                                    eum
+                                    aperiam eius distinctio sunt quam, id tenetur! Soluta, quis! Atque unde velit
+                                    facilis
+                                    ipsam eos, eaque omnis.</p>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque commodi ducimus animi
+                                    eum
+                                    aperiam eius distinctio sunt quam, id tenetur! Soluta, quis! Atque unde velit
+                                    facilis
+                                    ipsam eos, eaque omnis.</p>
+                                <h3 class="text-center">Name</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="bg-light text-dark p-5">
+                            <div class="border border-dark border-dashed p-5">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque commodi ducimus animi
+                                    eum
+                                    aperiam eius distinctio sunt quam, id tenetur! Soluta, quis! Atque unde velit
+                                    facilis
+                                    ipsam eos, eaque omnis.</p>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque commodi ducimus animi
+                                    eum
+                                    aperiam eius distinctio sunt quam, id tenetur! Soluta, quis! Atque unde velit
+                                    facilis
+                                    ipsam eos, eaque omnis.</p>
+                                <h3 class="text-center">Name</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="bg-light text-dark p-5">
+                            <div class="border border-dark border-dashed p-5">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque commodi ducimus animi
+                                    eum
+                                    aperiam eius distinctio sunt quam, id tenetur! Soluta, quis! Atque unde velit
+                                    facilis
+                                    ipsam eos, eaque omnis.</p>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque commodi ducimus animi
+                                    eum
+                                    aperiam eius distinctio sunt quam, id tenetur! Soluta, quis! Atque unde velit
+                                    facilis
+                                    ipsam eos, eaque omnis.</p>
+                                <h3 class="text-center">Name</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+                    <img src="images/icons/chevron-left.svg" alt="left Icon">
+                </a>
+                <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+                    <img src="images/icons/chevron-right.svg" alt="Right Icon">
+                </a>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="social-awareness">
+        <img src="images/banners/social-awareness-banner.jpg" alt="Awareness Banner" class="img-fluid">
+    </section>
+
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row align-items-center d-flex">
+                <div class="col-lg-6 col-md-6 col-sm-12 md-mb-4">
+                    <div class="shadow p-4">
+                        <h3 class="font-weight-bold">SUBSCRIBE to our newsletter</h3>
+                        <br>
+                        <p>Sign up for our email updates to receive
+                            Anaforwomen's newsletter, stories and information on
+                            opportunities to make a difference.</p>
+
+                        <form action="#" id="subscribe-form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="name" id="name" required
+                                    placeholder="Enter your name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="email" id="email" required
+                                    placeholder="Enter email">
+                            </div>
+                            <button type="submit" class="btn btn-outline-dark">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="p-4">
+                        <h5><img class="icon" src="images/icons/location.svg" alt="Map Icon"> Address: </h5>
+                        <p>Gokuldham, Bhimtal Nainital, Uttarakhand</p>
+
+                        <br>
+
+                        <h5><img class="icon" src="images/icons/phone.svg" alt="Phone Icon"> Contact No: </h5>
+                        <a class="h6" href="tel:9958461716">+91 - 99584 61716</a>
+
+                        <br><br> <br>
+
+                        <h5><img class="icon" src="images/icons/email.svg" alt="Email Icon"> Email: </h5>
+                        <a class="h6" href="mailto:info@anaforwomen.com">info@anaforwomen.com</a>
+                        <br>
+                        <a class="h6" href="mailto:anaforwomen@gmail.com">anaforwomen@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <?php include('layouts/footer.html'); ?>
+
+    <script>
+        $("#subscribe-form").submit(e => {
+            e.preventDefault();
+
+            $.ajax({
+                url: "php/subscribe.php",
+                method: "POST",
+                data: $(e.target).serialize(),
+                beforeSend: () => {
+                    $('.loader-container').removeClass('d-none');
+                },
+                success: (data, status) => {
+                    alert('Thank you for subscribe us. You will get latest updates from us.');
+                    $("#subscribe-form").trigger("reset");
+                },
+                error: (data, status) => {
+                    $('.loader-container').addClass('d-none');
+                },
+                complete: () => {
+                    $('.loader-container').addClass('d-none');
+                }
+            });
+        });
+    </script>
+
+    <!-- Lightbox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+    <script>
+        $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+            event.preventDefault();
+            $(this).ekkoLightbox();
+        });
+    </script>
+</body>
+
+</html>

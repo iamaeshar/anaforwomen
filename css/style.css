@@ -1,0 +1,95 @@
+/* Utility */
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.top-1 {
+  top: 1rem;
+}
+
+.bottom-0 {
+  bottom: 0;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.left-0 {
+  left: 0;
+}
+
+.z-index-2 {
+  z-index: 2;
+}
+
+.border-dashed {
+  border-style: dashed !important;
+}
+
+/* SVG Icons */
+.icon {
+  margin-top: -4px;
+}
+
+@media(max-width: 768px) {
+  #header-logo {
+    visibility: hidden;
+  }
+}
+
+/* Home Page */
+#why-we-need,
+#testimonials {
+  background-attachment: fixed;
+  background-color: rgba(0, 0, 0, 0.65);
+  background-blend-mode: overlay;
+}
+
+#why-we-need {
+  background-image: url("../images/banners/bg-1.jpg");
+}
+
+#testimonials {
+  background-image: url("../images/banners/bg-2.jpg");
+}
+
+.gallery-item {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.ekko-lightbox .modal-body {
+  padding: 0px;
+}
+
+footer {
+  background-color: #eeeeee;
+}
+
+.loader-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 2;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  height: 3rem;
+  width: 4rem;
+  border-radius: 0.25rem;
+  padding: 8px 14px;
+}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <?php include('include/head.inc.html'); ?>
+    <title>Gallery | Ana for Women</title>
+    <meta name="description" content="We have been working for menstrual hygiene and management in the remote areas of the country, here is a glimpse of our work.">
+</head>
+
+<body>
+    <?php include('layouts/header.html'); ?>
+    <?php include('layouts/navbar.html'); ?>
+
+    <section id="our-story-about">
+        <img class="d-block w-100" src="images/banners/gallery.jpg" alt="Banner">
+    </section>
+
+    <section id="our-story-content" class="py-5">
+        <div class="container text-justify">
+            <h2 class="font-weight-bold">Gallery</h2>
+            <p>We have been working for menstrual hygiene and management in the remote areas of the country, here is a
+                glimpse of our work. <b>Support us in our initiative</b> to make us spread this initiative to each women who is
+                unaware of menstruation hygiene.</p>
+            <br>
+
+            <div class="row">
+                <?php
+                    for ($i = 12; $i >= 1; $i--) {
+                        ?>
+                <div class="col-md-3">
+                    <a href="images/gallery/gallery (<?= $i?>).jpg" data-gallery="example-gallery"
+                        data-toggle="lightbox">
+                        <img src="images/gallery/gallery (<?= $i?>).jpg" class="img-fluid shadow-sm mb-3 gallery-item"
+                            alt="Gallery Image <?=$i ?>">
+                    </a>
+                </div>
+                <?php
+                    }
+                    ?>
+            </div>
+        </div>
+    </section>
+
+    <?php include('layouts/footer.html'); ?>
+</body>
+
+</html>

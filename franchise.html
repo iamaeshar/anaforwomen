@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <?php include('include/head.inc.html'); ?>
+    <title>Grab Franchise | Ana for Women</title>
+    <meta name="description"
+        content="Grab the franchise of Golden Wings Sanitary Pads to aware the women of your area. Provide adequate knowledge about sanitary napkins to women.">
+</head>
+
+<body>
+    <?php include('layouts/header.html'); ?>
+    <?php include('layouts/navbar.html'); ?>
+
+    <section id="our-story-about">
+        <img class="d-block w-100" src="images/banners/home-banner-3.jpg" alt="Anaforwomen - First slide Banner">
+    </section>
+
+    <section id="our-story-content" class="py-5">
+        <div class="container text-justify">
+            <h2 class="font-weight-bold">FRANCHISE</h2>
+            <p>Golden Wings provides durable and cheap pads for the women who can't afford the expensive ones and still
+                using the cloth. We all knew that there are many diseases which arise by using the cloth. So by using
+                this pad they can change themselves from cloth to pad. It also help women’s who need to work but don't
+                had any kind of degrees. They can go their near villages for encouraging other women to use golden wings
+                pad and join them in the work from this they can also earn money. It is not expensive and it is high
+                quality so women can purchase this without hesitating. They can even work with us and earn money by
+                selling these to others.</p>
+            <br><br>
+
+
+            <div class="row d-flex align-items-center">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h4 class="font-weight-bold">REGISTER here to join us!</h4>
+                    <p>It's always wonderful to get to know women, with the mystery and the joy and the depth. If you
+                        can make a woman laugh, you're seeing the most beautiful thing on God's Earth.</p>
+                    <p>Register to join the hands with us</p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="card shadow">
+                        <div class="card-header">
+                            Register Now
+                        </div>
+                        <div class="card-body">
+                            <form id="franchise-form">
+                                <div class="form-group">
+                                    <input id="name" name="name" required placeholder="Enter your name" type="text"
+                                        class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <input id="email" name="email" required placeholder="Enter your email" type="email"
+                                        class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <input id="tel" name="phone" required placeholder="Enter your phone number"
+                                        type="phone" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-outline-dark">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <?php include('layouts/footer.html'); ?>
+
+
+    <script>
+        $("#franchise-form").submit(e => {
+            e.preventDefault();
+
+            $.ajax({
+                url: "php/franchise.php",
+                method: "POST",
+                data: $(e.target).serialize(),
+                beforeSend: () => {
+                    $('.loader-container').removeClass('d-none');
+                },
+                success: (data, status) => {
+                    alert('Thank you for Franchise Request. Our team will contact you soon.');
+                    $("#franchise-form").trigger("reset");
+                },
+                error: (data, status) => {
+                    $('.loader-container').addClass('d-none');
+                },
+                complete: () => {
+                    $('.loader-container').addClass('d-none');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

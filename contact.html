@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <?php include('include/head.inc.html'); ?>
+    <title>Contact Us | Ana for Women</title>
+</head>
+
+<body>
+    <?php include('layouts/header.html'); ?>
+    <?php include('layouts/navbar.html'); ?>
+
+    <section id="our-story-about">
+        <img class="d-block w-100" src="images/banners/home-banner-3.jpg" alt="Anaforwomen - First slide Banner">
+    </section>
+
+    <section id="our-story-content" class="py-5">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-lg-8 col-md-6 col-sm-12">
+                    <h2 class="font-weight-bold">SEND us a message</h2>
+                    <p>For general questions, please fill out the form to the right and we'll contact you as soon as
+                        possible.</p>
+
+                    <br>
+
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input id="name" name="name" required placeholder="Enter your name" type="text"
+                                class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input id="email" name="email" required placeholder="Enter your email" type="email"
+                                class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" cols="40" rows="5" class="form-control" required
+                                placeholder="Enter your Message"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-outline-dark">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 shadow p-4">
+                    <h5><img class="icon" src="images/icons/location.svg" alt="Map Icon"> Address: </h5>
+                    <p>Gokuldham, Bhimtal Nainital, Uttarakhand</p>
+
+                    <br>
+
+                    <h5><img class="icon" src="images/icons/phone.svg" alt="Phone Icon"> Contact No: </h5>
+                    <a class="h6" href="tel:9958461716">+91 - 99584 61716</a>
+
+                    <br><br><br>
+
+                    <h5><img class="icon" src="images/icons/email.svg" alt="Email Icon"> Email: </h5>
+                    <a class="h6" href="mailto:info@anaforwomen.com">info@anaforwomen.com</a>
+                    <br>
+                    <a class="h6" href="mailto:anaforwomen@gmail.com">anaforwomen@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <?php include('layouts/footer.html'); ?>
+
+    <script>
+        $("#contact-form").submit(e => {
+            e.preventDefault();
+
+            $.ajax({
+                url: "php/message.php",
+                method: "POST",
+                data: $(e.target).serialize(),
+                beforeSend: () => {
+                    $('.loader-container').removeClass('d-none');
+                },
+                success: (data, status) => {
+                    alert('Thank you for contact us.');
+                    $("#contact-form").trigger("reset");
+                },
+                error: (data, status) => {
+                    $('.loader-container').addClass('d-none');
+                },
+                complete: () => {
+                    $('.loader-container').addClass('d-none');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
